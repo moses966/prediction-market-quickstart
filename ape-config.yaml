@@ -1,0 +1,42 @@
+name: Simple Prediction Market
+
+compile:
+  output_extra:
+    - ABI
+
+networks:
+  development:
+    ethereum:
+      anvil:
+        uri: http://127.0.0.1:8545
+
+dependencies:
+  
+  - python: snekmate
+    config_override:
+      contracts_folder: .
+
+  - name: OpenZeppelin
+    github: OpenZeppelin/openzeppelin-contracts
+    version: 4.8.2
+    config_override:
+      contracts_folder: .
+
+  - name: Uniswap
+    github: Uniswap/v2-periphery
+    ref: v1.0.0-beta.0
+    config_override:
+      contracts_folder: .
+
+  - name: Uniswap
+    github: Uniswap/solidity-lib
+    ref: v4.0.0-alpha
+    config_override:
+      contracts_folder: .
+
+  - name: Uniswap
+    github: Uniswap/v2-core
+    ref: v1.0.1
+    config_override:
+      contracts_folder: .
+
