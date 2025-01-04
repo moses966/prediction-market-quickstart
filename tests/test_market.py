@@ -68,6 +68,6 @@ def test_market(
 
     # create outcome tokens
     market.create_outcome_tokens(HexBytes(logs[0]), constants.amount, sender=owner)
-    assert project.TestERC20.at((logs[1])).balanceOf(owner) == constants.amount
-    assert project.TestERC20.at((logs[2])).balanceOf(owner) == constants.amount
+    assert project.TestERC20.at((logs[1]), fetch_from_explorer=False).balanceOf(owner) == constants.amount
+    assert project.TestERC20.at((logs[2]), fetch_from_explorer=False).balanceOf(owner) == constants.amount
     assert sandbox.get_contracts()['currency'].balanceOf(owner) == 0

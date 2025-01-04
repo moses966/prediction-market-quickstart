@@ -13,9 +13,9 @@ This guide provides step-by-step instructions to:
 - Obtain an API key from [Alchemy](https://www.alchemy.com/).
 
 ---
-Run: `git clone https://github.com/moses966/prediction-market-example.git`
+Run: `git clone https://github.com/moses966/prediction-market-quickstart.git`
 
-And then inside the `prediction-market-quickstart` folder, run `poetry add` and then `poetry shell`
+And then inside the `prediction-market-quickstart` folder, run `poetry install` and then `poetry shell`
 
 Finally, run the following commands to compile the necessary contracts:
 
