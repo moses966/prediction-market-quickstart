@@ -13,7 +13,6 @@ class Sandbox:
     def deploy_finder_contract(self):
         if "finder_contract" not in self._contracts:
             self._contracts["finder_contract"] = self.deployer.deploy(self.project.FinderContract)
-        #return self._contracts["finder_contract"]
 
     def deploy_store_contract(self):
         if "store_contract" not in self._contracts:
@@ -23,7 +22,6 @@ class Sandbox:
                 constants.weekly_delay_fee,
                 constants.empty_address,
             )
-        #return self._contracts["store_contract"]
     
     def deploy_ancillary_interface(self):
         if "ancillary_interface" not in self._contracts:
@@ -39,17 +37,14 @@ class Sandbox:
                 "TT",
                 18
             )
-        #return self._contracts["currency"]
 
     def deploy_address_whitelist(self):
         if "address_whitelist" not in self._contracts:
             self._contracts["address_whitelist"] = self.deployer.deploy(self.project.AddressWhitelistContract)
-        #return self._contracts["address_whitelist"]
 
     def deploy_identifier_whitelist(self):
         if "identifier_whitelist" not in self._contracts:
             self._contracts["identifier_whitelist"] = self.deployer.deploy(self.project.IdentifierWhitelistContract)
-        #return self._contracts["identifier_whitelist"]
 
     def deploy_mock_oracle(self):
         if "mock_oracle" not in self._contracts:
@@ -59,7 +54,6 @@ class Sandbox:
                 finder.address,
                 constants.empty_address,
             )
-        #return self._contracts["mock_oracle"]
     
     def register_contracts(self):
         store = self._contracts["store_contract"]
@@ -121,7 +115,6 @@ class Sandbox:
                 self._contracts["optimistic_oracle_v3"].address,
                 sender=self.deployer,
             )
-        #return self._contracts["optimistic_oracle_v3"]
 
     def deploy_expanded_token_blueprint(self):
         if "expanded_token_blueprint" not in self._contracts:
@@ -131,7 +124,6 @@ class Sandbox:
                 "EXT",
                 18
             )
-        #return self._contracts["expanded_token_blueprint"]
 
     def deploy_outcome_token_factory(self):
         if "factory" not in self._contracts:
@@ -140,7 +132,6 @@ class Sandbox:
                 self.project.OutComeTokenFactory,
                 blueprint.contract_address,
             )
-        #return self._contracts["factory"]
     
     def deploy_all(self):
         self.deploy_finder_contract()

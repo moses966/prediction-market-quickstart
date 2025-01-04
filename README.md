@@ -9,6 +9,7 @@ This guide provides step-by-step instructions to:
 
 ### Prerequisites
 
+- [Poetry](https://python-poetry.org/docs/#installing-with-pipx) already installed
 - Install [ApeWorx](https://docs.apeworx.io/ape/stable/) CLI.
 - Obtain an API key from [Alchemy](https://www.alchemy.com/).
 
